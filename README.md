@@ -140,15 +140,48 @@ psql -h localhost -p 5432 -U postgres
 Foi verificada a persistência dos dados no PostgreSQL e agora, vamos ao próximo passo: desafio 3.
 
 
+
 ># Desafio 3 ![Static Badge](https://img.shields.io/badge/STATUS-Em_Desenvolvimento-FFC000)
 Instalar o docker no linux, criar uma imagem do wordpress com banco de dados e persistir os dados usando docker-compose
+
 Em desenvolvimento ⚠️⚠️
 
 
-### Criação de uma imagem do Wordpress
+### Criação de uma imagem do Wordpress com banco de dados PostgreSQL
+
+
+Como já havia instalado o compose nos desafios anteriores, utilizei o comando abaixo para verifica a situação do Compose.
+```
+docker compose version
+```
+<div align="center"> <img src="https://github.com/bmsousa9/CompassUOL-Semana-02/assets/111213549/0402d639-acc1-43fd-95db-8c7dfd4799b4"/> </div>
+
+A partir daí, criei um diretório `mkdir` e usei `cd` para acessá-lo e assim conseguir criar e editar um arquivo yml.
+```
+mkdir /wordpress
+cd /wordpress
+vim docker-compose.yml
+```
+<div align="center"> <img src="https://github.com/bmsousa9/CompassUOL-Semana-02/assets/111213549/05dcffeb-f419-497a-83be-01859a7d6de9"/> </div>
+<div align="center"> <img src="https://github.com/bmsousa9/CompassUOL-Semana-02/assets/111213549/5a74212c-1416-4f18-b5e3-35697fa943b3"/> </div>
+<div align="center"> <img src="https://github.com/bmsousa9/CompassUOL-Semana-02/assets/111213549/03b6f751-fc27-47b0-8eba-a9477ead9ac6"/> </div>
+
+Inseri o comando `docker compose up` para 
+```
+docker compose up
+```
+<div align="center"> <img src="https://github.com/bmsousa9/CompassUOL-Semana-02/assets/111213549/a6d9e550-7694-42cb-88c7-aee377eb5f2b"/> </div>
+
 ENTRAR
 ```
 ENTRAR
 ```
 <div align="center"> <img src=""/> </div>
+
+ENTRAR
+```
+ENTRAR
+```
+<div align="center"> <img src=""/> </div>
+
 Em desenvolvimento ⚠️⚠️
