@@ -1,4 +1,4 @@
-![Static Badge](https://img.shields.io/badge/STATUS-Em_Desenvolvimento-FFC000)
+![Static Badge](https://img.shields.io/badge/STATUS-Resolvido-2e8b57)
 ># Sprint 2 - Docker 
 <div align="center"> <img src="https://github.com/bmsousa9/images/assets/111213549/d250db2d-77e2-4d3d-ace7-8675a7efd155" width="400px" /> </div>
 
@@ -9,7 +9,7 @@ Restaurar o backup das 2 VMS, e instalar o docker na VM01
 
 
 ### Clonar a VM utilizada na Sprint 1
-Como eu havia criado alguns Snapshots da VM01, restaurei até ao ponto seguinte ao da instalação do Oracle Linux 8.8, lá no Oracle VM Virtual Box e clonei a VM01. 
+Como eu havia criado alguns Snapshots da VM01, restaurei até ao ponto seguinte ao da congiduração de ip fixo, lá no Oracle VM Virtual Box e clonei a VM01. 
 
 <div align="center"> <img src="https://github.com/bmsousa9/images/assets/111213549/6d32a090-243e-42f7-af7d-ef3d0fffa460"/> </div>
 
@@ -141,13 +141,12 @@ Foi verificada a persistência dos dados no PostgreSQL e agora, vamos ao próxim
 
 
 
-># Desafio 3 ![Static Badge](https://img.shields.io/badge/STATUS-Em_Desenvolvimento-FFC000)
+># Desafio 3  ![Static Badge](https://img.shields.io/badge/STATUS-Resolvido-2e8b57)
 Instalar o docker no linux, criar uma imagem do wordpress com banco de dados e persistir os dados usando docker-compose
 
-Em desenvolvimento ⚠️⚠️
 
 
-### Criação de uma imagem do Wordpress com banco de dados PostgreSQL
+### Criação de uma imagem do Wordpress com banco de dados MySQL
 
 
 Como já havia instalado o compose nos desafios anteriores, utilizei o comando abaixo para verifica a situação do Compose.
@@ -164,24 +163,39 @@ vim docker-compose.yml
 ```
 <div align="center"> <img src="https://github.com/bmsousa9/CompassUOL-Semana-02/assets/111213549/05dcffeb-f419-497a-83be-01859a7d6de9"/> </div>
 <div align="center"> <img src="https://github.com/bmsousa9/CompassUOL-Semana-02/assets/111213549/5a74212c-1416-4f18-b5e3-35697fa943b3"/> </div>
-<div align="center"> <img src="https://github.com/bmsousa9/CompassUOL-Semana-02/assets/111213549/03b6f751-fc27-47b0-8eba-a9477ead9ac6"/> </div>
+<div align="center"> <img src="https://github.com/bmsousa9/CompassUOL-Semana-02/assets/111213549/6d39d2a1-d961-41da-ae2e-c4e23ed924d8"/> </div>
 
 Inseri o comando `docker compose up` para 
 ```
 docker compose up
 ```
-<div align="center"> <img src="https://github.com/bmsousa9/CompassUOL-Semana-02/assets/111213549/a6d9e550-7694-42cb-88c7-aee377eb5f2b"/> </div>
+<div align="center"> <img src="https://github.com/bmsousa9/CompassUOL-Semana-02/assets/111213549/91076ab3-2115-4b9f-ae0c-436064c98144"/> </div>
+<div align="center"> <img src="https://github.com/bmsousa9/CompassUOL-Semana-02/assets/111213549/fe008a26-f7cc-493e-8e56-e69b5cb11d0c"/> </div>
 
-ENTRAR
+O próximo passo foi acessar pelo navegador o IP fixo da VM junto com a porta configurada no arquivo yml para gerar as imagens e configurar os contêineres.
 ```
-ENTRAR
+https://192.168.0.50:2000
 ```
-<div align="center"> <img src=""/> </div>
+<div align="center"> <img src="https://github.com/bmsousa9/CompassUOL-Semana-02/assets/111213549/87d7c922-f9c3-4260-8dd9-3c26db8e92de"/> </div>
 
-ENTRAR
+Após a configuração do usuário e senha do Wordpress no navegador, para verificação da persistência de dados, inseri o comando para desmontar os contêineres.
 ```
-ENTRAR
+docker compose down
 ```
-<div align="center"> <img src=""/> </div>
+<div align="center"> <img src="https://github.com/bmsousa9/CompassUOL-Semana-02/assets/111213549/fb73f5db-87be-49b2-baf5-c4afa8a94c48"/> </div>
 
-Em desenvolvimento ⚠️⚠️
+Voltei ao navegavor e tentei acessar novamente pelo mesmo IP de antes, porém não houve sucesso.
+<div align="center"> <img src="https://github.com/bmsousa9/CompassUOL-Semana-02/assets/111213549/c8983f4d-56fb-430c-901f-4086e094437c"/> </div>
+
+Mais uma vez entrei com o comando para iniciar novamente os contêineres.
+```
+docker compose up -d
+```
+<div align="center"> <img src="https://github.com/bmsousa9/CompassUOL-Semana-02/assets/111213549/07c716d1-28e5-4b2b-b473-f971e108f4c1"/> </div>
+
+A partir daí, ao atualizar a página com o mesmo IP de antes, foi possível acessar o Wordpress.
+<div align="center"> <img src="https://github.com/bmsousa9/CompassUOL-Semana-02/assets/111213549/5e25e36a-bfe7-4c9a-bc19-1924269cb218"/> </div>
+
+
+
+Agora, vamos às <a href="https://github.com/bmsousa9/CompassUOL-Semana-03-04" target="_blank" rel="noopener noreferrer"> Sprints 3 e 4 </a>. 
