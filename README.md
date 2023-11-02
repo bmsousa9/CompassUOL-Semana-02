@@ -9,7 +9,7 @@ Restaurar o backup das 2 VMS, e instalar o docker na VM01
 
 
 ### Clonar a VM utilizada na Sprint 1
-Como eu havia criado alguns Snapshots da VM01, restaurei até ao ponto seguinte ao da congiduração de ip fixo, lá no Oracle VM Virtual Box e clonei a VM01. 
+Como eu havia criado alguns Snapshots da VM01 da <a href="https://github.com/bmsousa9/CompassUOL-Semana-01#configurar-o-ip-fixo-na-m%C3%A1quina-virtual" target="_blank" rel="noopener noreferrer"> Sprint 1</a>, restaurei até ao ponto seguinte ao da configuração de ip fixo, lá no Oracle VM Virtual Box e clonei a VM01. 
 
 <div align="center"> <img src="https://github.com/bmsousa9/images/assets/111213549/6d32a090-243e-42f7-af7d-ef3d0fffa460"/> </div>
 
